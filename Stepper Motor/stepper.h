@@ -22,12 +22,14 @@ Header Inclusions
 /*******************************************************************************
 Constant variables
 *******************************************************************************/
-#define DIR_PIN                 32      //GPIO Pin 32 of ESP32 connect to positive pin of direction (DIR+ of S4D motor driver) for example
-#define STEP_PIN                33      //GPIO Pin 33 of ESP32 connect to positive side of pulse/step direction (PULSE+ of S4D motor driver) for example
+#define DIR_PIN                 32      //GPIO Pin 32 of MCU (ex. ESP32) connect to positive pin of direction (DIR+ of S4D motor driver) for example
+#define STEP_PIN                33      //GPIO Pin 33 of MCU (ex. ESP32) connect to positive side of pulse/step direction (PULSE+ of S4D motor driver) for example
 
 #define COUNTER_CLOCK_WISE      0       
 #define CLOCK_WISE              1
-#define BOTH_DIRECTION
+
+#define ONE_DIRECTION           0
+#define BOTH_DIRECTION          1
 
 #define RUN_STEPPER             1
 #define STOP_STEPPER            0
@@ -38,12 +40,12 @@ Constant variables
 /*******************************************************************************
 typdefs
 *******************************************************************************/
-typedef struct
+struct
 {
     bool set_motor;         //motor condition set by the user through display, 0 - OFF, 1 - ON
     bool set_dir;           //motor direction set by the user through display, 1 - clock wise, 0 - counter clock wise
 
-    uint8_t set_dir_mode;   //mode of the direction set by the user, 0/1 - one direction, 2-both direction
+    bool set_dir_mode;   //mode of the direction set by the user, 0 - one direction, 1-both direction
 
     uint set_speed;         //speed set by the user
 
