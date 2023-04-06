@@ -57,6 +57,7 @@ void motor_run(void)
     //one complete rotation of a stepper motor
     digitalWrite(STEP_PIN,HIGH);
     delayMicroseconds(500);
+    
     digitalWrite(STEP_PIN,LOW);
     delayMicroseconds(500);
 }
