@@ -11,6 +11,8 @@
     This file contains the global variables and function prototypes for a stepper motor control project.
 
  *******************************************************************************/
+
+// ensure this library description is only included once
 #ifndef STEPPER_H
 #define STEPPER_H
 
@@ -22,20 +24,22 @@ Header Inclusions
 /*******************************************************************************
 Constant variables
 *******************************************************************************/
-#define DIR_PIN                 32      //GPIO Pin 32 of MCU (ex. ESP32) connect to positive pin of direction (DIR+ of S4D motor driver) for example
-#define STEP_PIN                33      //GPIO Pin 33 of MCU (ex. ESP32) connect to positive side of pulse/step direction (PULSE+ of S4D motor driver) for example
+#define STEPS_PER_REVOLUTION        200     //calculate using motor step angle, i.e., total angle/step_angle = 360/1.8 = 200
 
-#define COUNTER_CLOCK_WISE      0       
-#define CLOCK_WISE              1
+#define DIR_PIN                     32      //GPIO Pin 32 of MCU (ex. ESP32) connect to positive pin of direction (DIR+ of S4D motor driver) for example
+#define STEP_PIN                    33      //GPIO Pin 33 of MCU (ex. ESP32) connect to positive side of pulse/step direction (PULSE+ of S4D motor driver) for example
 
-#define ONE_DIRECTION           0
-#define BOTH_DIRECTION          1
+#define COUNTER_CLOCK_WISE           0
+#define CLOCK_WISE                   1
 
-#define RUN_STEPPER             1
-#define STOP_STEPPER            0
+#define ONE_DIRECTION                0
+#define BOTH_DIRECTION               1
 
-#define true                    1
-#define false                   0
+#define RUN_STEPPER                  1  
+#define STOP_STEPPER                 0
+
+#define true                         1
+#define false                        0
 
 /*******************************************************************************
 typdefs

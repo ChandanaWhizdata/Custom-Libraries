@@ -5,7 +5,7 @@
     Whizdata Solutions LLP.
 
   File Name:
-    stepper.c
+    stepper.cpp
 
   Summary:
     This file contains all the functions related to stepper motor control
