@@ -24,7 +24,7 @@ Header Inclusions
 /*******************************************************************************
 Constant variables
 *******************************************************************************/
-#define STEPS_PER_REVOLUTION        200     //calculate using motor step angle, i.e., total angle/step_angle = 360/1.8 = 200
+#define STEPS_PER_REVOLUTION        200     //calculate using motor step angle, i.e., our motors' total angle/step_angle = 360/1.8 = 200
 
 #define DIR_PIN                     32      //GPIO Pin 32 of MCU (ex. ESP32) connect to positive pin of direction (DIR+ of S4D motor driver) for example
 #define STEP_PIN                    33      //GPIO Pin 33 of MCU (ex. ESP32) connect to positive side of pulse/step direction (PULSE+ of S4D motor driver) for example
