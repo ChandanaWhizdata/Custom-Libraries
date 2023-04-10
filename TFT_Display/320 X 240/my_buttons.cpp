@@ -1,14 +1,14 @@
 /*******************************************************************************
-  TFT Display Source file 
+  TFT Buttons Source file 
 
   Company:
     Whizdata Solutions LLP.
 
   File Name:
-    tft_display.cpp
+    my_buttons.cpp
 
   Summary:
-    This file contains all the functions related to TFT display control
+    This file contains all the functions related to TFT buttons control
 
   Description:
     This file contains implementation of the display
@@ -18,25 +18,33 @@
 /*******************************************************************************
 Header Inclusions
 *******************************************************************************/
-#include <tft_display.h>
 #include <my_buttons.h>
-#include <my_texts.h>
+#include <tft_display.h>
 
 /*******************************************************************************
 Functions
 *******************************************************************************/
 
 /******************************************************************************
-Function:     TFT_Init
-Description:  TFT display initialization
+Function:     Buttons_Init
+Description:  TFT buttons initialization and creation
 Input:        nothing (uses some global variables)
 Output:       nothing (modifies some global variables)            
 ******************************************************************************/
-void TFT_Init(void)
+void Buttons_Init(void)
 {
-  tft.begin();
-  tft.setRotation(1);
-  tft.fillScreen(TFT_BLACK);
-  
-  Buttons_Init();
+  Buttons_Create();
+}
+
+/******************************************************************************
+Function:     Buttons_Create
+Description:  TFT buttons creation
+Input:        nothing (uses some global variables)
+Output:       nothing (modifies some global variables)
+******************************************************************************/
+void Buttons_Create(void)
+{
+  ButtonWidget Start_Stop_Butn = ButtonWidget(&tft);
+  ButtonWidget Clock_Butn = ButtonWidget(&tft);
+  ButtonWidget Counter_Clock_Butn = ButtonWidget(&tft);
 }

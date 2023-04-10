@@ -2,19 +2,19 @@
   System Definitions
 
   File Name:
-    tft_display.h
+    my_buttons.h
 
   Summary:
     Header file which shares global variables and function prototypes.
 
   Description:
-    This file contains the global variables and function prototypes for a TFT display control.
+    This file contains the global variables and function prototypes for a buttons.
 
  *******************************************************************************/
 
 // ensure this library description is only included once
-#ifndef TFT_DISPLAY_H
-#define TFT_DISPLAY_H
+#ifndef MY_BUTTONS_H
+#define MY_BUTTONS_H
 
 /*******************************************************************************
 Header Inclusions
@@ -24,13 +24,10 @@ Header Inclusions
 #include <TFT_eWidget.h>            // Widget library
 
 /*******************************************************************************
-Definitions
-*******************************************************************************/
-TFT_eSPI tft = TFT_eSPI(); 
-
-/*******************************************************************************
 Function prototypes
 *******************************************************************************/
-void TFT_Init(void);
+void Buttons_Init(void);
 
-#endif  //TFT_DISPLAY_H
+void Buttons_Create(void);
+
+#endif  //MY_BUTTONS_H
