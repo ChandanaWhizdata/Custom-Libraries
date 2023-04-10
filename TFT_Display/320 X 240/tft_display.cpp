@@ -19,6 +19,8 @@
 Header Inclusions
 *******************************************************************************/
 #include <tft_display.h>
+#include <buttons.h>
+#include <texts.h>
 
 /*******************************************************************************
 Functions
@@ -32,5 +34,5 @@ Output:       nothing (modifies some global variables)
 ******************************************************************************/
 void TFT_Init(void)
 {
-    
+    Buttons_Init();
 }
