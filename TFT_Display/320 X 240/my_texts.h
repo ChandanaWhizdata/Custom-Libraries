@@ -16,6 +16,11 @@
 #ifndef MY_TEXTS_H
 #define MY_TEXTS_H
 
+/*******************************************************************************
+Function prototypes
+*******************************************************************************/
+void Texts_Init(void);
 
+void texts_display(void);
 
 #endif  //MY_TEXTS_H
